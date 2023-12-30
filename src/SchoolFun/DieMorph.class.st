@@ -26,8 +26,8 @@ DieMorph class >> faces: aNumber [
 
 { #category : #'as yet unclassified' }
 DieMorph >> dieValue: aNumber [
-	(aNumber isInteger 
-		and: [aNumber > 0]
+	((aNumber isInteger 
+		and: [aNumber > 0])
 		and: [aNumber <= faces])
 		ifTrue: 
 		[dieValue := aNumber.
@@ -107,8 +107,8 @@ DieMorph >> face9 [
 { #category : #'as yet unclassified' }
 DieMorph >> faces: aNumber [
 "Set the number of faces"
-(aNumber  isInteger 
-	and: [aNumber >0]
+((aNumber  isInteger 
+	and: [aNumber >0])
 	and: [aNumber  <=9])
 	ifTrue:[faces := aNumber ]
 ]
